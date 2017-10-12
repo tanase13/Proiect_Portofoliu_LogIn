@@ -12,10 +12,10 @@
    <script type="text/javascript" src="BootStrap/js/bootstrap.min.js"></script>
    <link rel="stylesheet" href="BootStrap/css/bootstrap.min.css">
    
- <link rel="stylesheet" href="Fonts\Font_Awesome\fonts\FontAwesome.otf"> 
+ <link rel="stylesheet" href="Fonts\font-awesome-4.7.0\FontAwesome.otf"> 
    <link rel="stylesheet" type="text/css" href="CSS/css.css">
       <link rel="stylesheet" type="text/css" href="CSS/css_profile.css">
-      	   <link rel="stylesheet" type="text/css" href="Fonts\Font_Awesome\css\font-awesome.css">
+      	   <link rel="stylesheet" type="text/css" href="Fonts\font-awesome-4.7.0\css\font-awesome.css">
 
 
  </head>
@@ -26,7 +26,7 @@
  		<div id="nav_wrapper"><br>
  			<table class="center">
  		<ul>
- 			<li><a href ="index.php">Home</a></li>
+ 			<li><a href ="profile.php">Home</a></li>
  			<li><a href="about.php">About</a></li>
  			<li><a href="">FAQ</a></li>
 
@@ -43,7 +43,7 @@
 				</div>
 				<div class="profile-user-title">
 					<div class="profile-user-name">
-						Mihalcea Catalin
+						<?php echo $_SESSION['u_first'] . ' ' .  $_SESSION['u_last']; ?>
 					</div>
 					<div class="profile-user-job">
 						Developer
@@ -67,7 +67,7 @@
 
 							echo '<form action="includes/logout.inc.php" method="POST">
 							
-							<button type="submit" name="submit">Logout</button>	
+							<br> <button class="btn btn-info btn-sm" type="submit" name="submit">Logout</button>	
 						</form>';
 
 						
