@@ -38,7 +38,7 @@ if(isset($_POST['submit'])){
 					$sql = "INSERT INTO users (user_first, user_last, user_email, user_pwd) VALUES ('$first', '$last','$email', '$hashedPwd');";
 
 					mysqli_query($conn, $sql);
-					header("Location: ../join.php?signup=success");
+					header("Location: ../created.php?signup=success");
 					exit();
 				}
 			}
